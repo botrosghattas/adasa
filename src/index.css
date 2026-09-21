@@ -1,0 +1,105 @@
+@import "tailwindcss";
+
+@layer base {
+  body {
+    @apply bg-neutral-950;
+  }
+}
+
+@font-face {
+  font-family: 'Tajawal';
+  src: url(./assets/fonts/Tajawal/Tajawal-ExtraLight.ttf);
+  font-weight: 200;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Tajawal';
+  src: url(./assets/fonts/Tajawal/Tajawal-Light.ttf);
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Tajawal';
+  src: url(./assets/fonts/Tajawal/Tajawal-Regular.ttf);
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Tajawal';
+  src: url(./assets/fonts/Tajawal/Tajawal-Medium.ttf);
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Tajawal';
+  src: url(./assets/fonts/Tajawal/Tajawal-Bold.ttf);
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Tajawal';
+  src: url(./assets/fonts/Tajawal/Tajawal-ExtraBold.ttf);
+  font-weight: 800;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Tajawal';
+  src: url(./assets/fonts/Tajawal/Tajawal-Black.ttf);
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+@theme {
+  --font-sans: 'Tajawal'
+}
+
+.btn-primary {
+  @apply bg-linear-to-br from-orange-500 to-orange-600 text-white px-8 py-4 font-semibold
+  transition-all rounded-full flex justify-center items-center duration-300 hover:cursor-pointer hover:-translate-y-0.5
+}
+
+.btn-secondary {
+  @apply hover:cursor-pointer px-8 py-4 font-semibold text-white transition-all border border-[#333]
+  rounded-full justify-center items-center duration-300 inline-flex hover:text-orange-500 hover:bg-orange-500/10 hover:border-orange-500
+}
+
+.section-label {
+  @apply inline-flex items-center gap-2 px-4 py-2 text-sm font-medium text-orange-500 bg-[#f973161a] rounded-full border border-orange-500/30 before:h-1.5 before:w-1.5 before:bg-orange-500 before:rounded-full before:animate-pulse
+}
+
+.glass-card {
+  @apply rounded-3xl bg-[#161616cc] border border-[#262626]
+}
+
+.gradient-text {
+  @apply bg-clip-text bg-linear-to-br from-orange-500 to-amber-400 text-transparent
+}
+
+.section-title {
+  @apply text-4xl font-bold md:text-5xl lg:text-6xl
+}
+
+.section-subtitle {
+  @apply mt-4 text-lg text-neutral-400
+}
+
+.card {
+  @apply transition-all duration-500 rounded-3xl bg-[rgb(22,22,22)] border border-[rgb(38,38,38)] hover:-translate-y-1
+}
+
+.input-dark {
+  @apply transition-all duration-300 bg-[#161616] border border-[#262626] outline-0 rounded-xl text-white focus:border-orange-500 focus:ring-3 focus:ring-orange-500/10
+}

@@ -8,7 +8,7 @@ export default function BlogsArticleCardL({post}) {
         >
             <a
                 className="flex flex-col md:flex-row"
-                href={`/blog/${post.slug}`}
+                href={`/blogs/${post.slug}`}
                 data-discover="true"
             >
                 <div className="relative w-full md:w-72 lg:w-80 h-52 md:h-auto shrink-0 overflow-hidden">

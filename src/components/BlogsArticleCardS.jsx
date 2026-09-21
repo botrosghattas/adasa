@@ -8,7 +8,7 @@ export default function BlogsArticleCardS({post}) {
         >
             <a
                 className="block"
-                href={`/blog/${post.slug}`}
+                href={`/blogs/${post.slug}`}
                 data-discover="true"
             >
                 <div className="relative h-52 overflow-hidden">

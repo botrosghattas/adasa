@@ -1,4 +1,4 @@
-import React from "react";
+import { Link } from "react-router-dom";
 
 export default function Hero() {
   return (
@@ -30,9 +30,9 @@ export default function Hero() {
             انغمس في أسرار المحترفين ونصائح عملية لتطوير مهاراتك في التصوير.
           </p>
           <div className="flex flex-col sm:flex-row justify-center gap-4 mb-16">
-            <a
+            <Link
               className="btn-primary inline-flex items-center justify-center gap-2 group"
-              href="/blogs"
+              to="/blogs"
               data-discover="true"
             >
               <span>استكشف المقالات</span>
@@ -49,10 +49,10 @@ export default function Hero() {
                   d="M17 8l4 4m0 0l-4 4m4-4H3"
                 />
               </svg>
-            </a>
-            <a
+            </Link>
+            <Link
               className="btn-secondary inline-flex items-center justify-center gap-2"
-              href="/about"
+              to="/about"
               data-discover="true"
             >
               <svg
@@ -69,7 +69,7 @@ export default function Hero() {
                 />
               </svg>
               <span>اعرف المزيد</span>
-            </a>
+            </Link>
           </div>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-3xl mx-auto">
             <div

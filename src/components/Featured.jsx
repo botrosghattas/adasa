@@ -1,5 +1,6 @@
 import { posts } from "../posts.json"
 import HomeArticleCard from "./HomeArticleCard";
+import { Link } from "react-router-dom";
 
 
 const featuredPosts = posts.filter(post => post.featured)
@@ -24,9 +25,9 @@ export default function Featured() {
                             محتوى منتقى لبدء رحلة تعلمك
                         </p>
                     </div>
-                    <a
+                    <Link
                         className="group inline-flex items-center gap-2 px-5 py-2.5 bg-linear-to-r from-orange-500 to-orange-600 text-white rounded-xl font-medium transition-all duration-300 hover:-translate-y-0.5"
-                        href="/blogs"
+                        to="/blogs"
                         data-discover="true"
                     >
                         عرض الكل
@@ -43,7 +44,7 @@ export default function Featured() {
                                 d="M9 5l7 7-7 7"
                             />
                         </svg>
-                    </a>
+                    </Link>
                 </div>
                 <div className="space-y-8">
                     {featuredPosts.map(post => {

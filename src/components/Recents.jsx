@@ -1,5 +1,6 @@
 import { posts } from "../posts.json";
 import RecentCard from "./RecentCard";
+import { Link } from "react-router-dom";
 
 posts.sort((a, b) => new Date(b.date) - new Date(a.date));
 
@@ -22,9 +23,9 @@ export default function Recents() {
                             محتوى جديد طازج من المطبعة
                         </p>
                     </div>
-                    <a
+                    <Link
                         className="group inline-flex items-center gap-2 text-orange-500 font-semibold hover:text-orange-400 transition-colors"
-                        href="/blog"
+                        to="/blog"
                         data-discover="true"
                     >
                         عرض جميع المقالات
@@ -41,7 +42,7 @@ export default function Recents() {
                                 d="M17 8l4 4m0 0l-4 4m4-4H3"
                             />
                         </svg>
-                    </a>
+                    </Link>
                 </div>
                 <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
                     

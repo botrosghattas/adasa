@@ -1,4 +1,5 @@
 import { dateFormatter } from "../utilis"
+import { Link } from "react-router-dom";
 
 export default function RecentCard({ post }) {
     return (
@@ -6,9 +7,9 @@ export default function RecentCard({ post }) {
             className="group card overflow-hidden"
             style={{ animationDelay: "0ms" }}
         >
-            <a
+            <Link
                 className="block"
-                href={`/blogs/${post.slug}`}
+                to={`/blogs/${post.slug}`}
                 data-discover="true"
             >
                 <div className="relative h-52 overflow-hidden">
@@ -82,7 +83,7 @@ export default function RecentCard({ post }) {
                         </div>
                     </div>
                 </div>
-            </a>
+            </Link>
         </article>
     )
 }

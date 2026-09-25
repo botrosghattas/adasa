@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import logo from "../assets/logo.png"
+import { Link } from "react-router-dom";
 
 export default function Nav({page}) {
 
@@ -8,9 +9,9 @@ export default function Nav({page}) {
       <nav className="fixed top-0 left-0 right-0 z-50 transition-all duration-500 bg-[#0a0a0a]/95 backdrop-blur-xl border-b border-transparent">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center h-20">
-            <a
+            <Link
               className="flex items-center gap-3 group"
-              href="/"
+              to="/"
               data-discover="true"
             >
               <div className="relative w-12 h-12 rounded-xl overflow-hidden group-hover:scale-105 transition-all duration-300">
@@ -28,32 +29,32 @@ export default function Nav({page}) {
                   عالم التصوير الفوتوغرافي
                 </span>
               </div>
-            </a>
+            </Link>
             <div className="hidden md:flex items-center">
               <div className="flex items-center bg-[#161616] rounded-full p-1.5 border border-[#262626]">
-                <a
+                <Link
                   aria-current={page==='home' && 'page'}
                   className={`px-5 py-2.5 rounded-full text-sm font-medium transition-all duration-300 text-neutral-400 ${page === 'home' && 'bg-linear-to-r from-orange-500 to-orange-600 text-white'}`}
-                  href="/"
+                  to="/"
                   data-discover="true"
                 >
                   الرئيسية
-                </a>
-                <a
+                </Link>
+                <Link
                   aria-current={page === 'blogs' && 'page'}
                   className={`px-5 py-2.5 rounded-full text-sm font-medium transition-all duration-300 text-neutral-400 hover:text-white ${page === 'blogs' && 'bg-linear-to-r from-orange-500 to-orange-600 text-white'}`}
-                  href="/blogs"
+                  to="/blogs"
                   data-discover="true"
                 >
                   المدونة
-                </a>
-                <a
+                </Link>
+                <Link
                   className="px-5 py-2.5 rounded-full text-sm font-medium transition-all duration-300 text-neutral-400 hover:text-white"
-                  href="/"
+                  to="/"
                   data-discover="true"
                 >
                   من نحن
-                </a>
+                </Link>
               </div>
             </div>
             <div className="hidden md:flex items-center gap-3">
@@ -72,13 +73,13 @@ export default function Nav({page}) {
                   />
                 </svg>
               </button>
-              <a
+              <Link
                 className="btn-primary text-sm"
-                href="/blogs"
+                to="/blogs"
                 data-discover="true"
               >
                 ابدأ القراءة
-              </a>
+              </Link>
             
             
             </div>
@@ -102,35 +103,35 @@ export default function Nav({page}) {
           <div className={`md:hidden overflow-hidden transition-all duration-300 ${mobileMenu ? 'max-h-80 pb-6' : 'max-h-0'}`}>
             <div className="bg-[#161616] backdrop-blur-xl rounded-2xl p-4 border border-[#262626]">
               <div className="flex flex-col space-y-1">
-                <a
+                <Link
                   aria-current="page"
                   className="px-4 py-3 rounded-xl text-sm font-medium transition-all duration-300 bg-orange-500/10 text-orange-500 border border-orange-500/30"
-                  href="/"
+                  to="/"
                   data-discover="true"
                 >
                   الرئيسية
-                </a>
-                <a
+                </Link>
+                <Link
                   className="px-4 py-3 rounded-xl text-sm font-medium transition-all duration-300 text-neutral-400 hover:bg-[#1a1a1a] hover:text-white"
-                  href="/blogs"
+                  to="/blogs"
                   data-discover="true"
                 >
                   المدونة
-                </a>
-                <a
+                </Link>
+                <Link
                   className="px-4 py-3 rounded-xl text-sm font-medium transition-all duration-300 text-neutral-400 hover:bg-[#1a1a1a] hover:text-white"
-                  href="/about"
+                  to="/about"
                   data-discover="true"
                 >
                   من نحن
-                </a>
-                <a
+                </Link>
+                <Link
                   className="btn-primary text-sm text-center mt-2"
-                  href="/blogs"
+                  to="/blogs"
                   data-discover="true"
                 >
                   ابدأ القراءة
-                </a>
+                </Link>
               </div>
             </div>
           </div>

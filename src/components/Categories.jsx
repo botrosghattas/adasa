@@ -1,4 +1,4 @@
-import {categories} from "../posts.json"
+import { Link } from "react-router-dom";
 
 export default function Categories() {
     return (
@@ -18,9 +18,9 @@ export default function Categories() {
                     </p>
                 </div>
                 <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6">
-                    <a
+                    <Link
                         className="group relative block p-6 rounded-2xl bg-[#161616] border border-[#262626] overflow-hidden hover:border-orange-500/30 transition-all duration-500 hover:-translate-y-1"
-                        href="/blogs?category=إضاءة"
+                        to="/blogs?category=إضاءة"
                         data-discover="true"
                         style={{ animationDelay: "0ms" }}
                     >
@@ -51,10 +51,10 @@ export default function Categories() {
                                 </svg>
                             </div>
                         </div>
-                    </a>
-                    <a
+                    </Link>
+                    <Link
                         className="group relative block p-6 rounded-2xl bg-[#161616] border border-[#262626] overflow-hidden hover:border-orange-500/30 transition-all duration-500 hover:-translate-y-1"
-                        href="/blogs?category=بورتريه"
+                        to="/blogs?category=بورتريه"
                         data-discover="true"
                         style={{ animationDelay: "100ms" }}
                     >
@@ -85,10 +85,10 @@ export default function Categories() {
                                 </svg>
                             </div>
                         </div>
-                    </a>
-                    <a
+                    </Link>
+                    <Link
                         className="group relative block p-6 rounded-2xl bg-[#161616] border border-[#262626] overflow-hidden hover:border-orange-500/30 transition-all duration-500 hover:-translate-y-1"
-                        href="/blogs?category=مناظر طبيعية"
+                        to="/blogs?category=مناظر طبيعية"
                         data-discover="true"
                         style={{ animationDelay: "200ms" }}
                     >
@@ -119,10 +119,10 @@ export default function Categories() {
                                 </svg>
                             </div>
                         </div>
-                    </a>
-                    <a
+                    </Link>
+                    <Link
                         className="group relative block p-6 rounded-2xl bg-[#161616] border border-[#262626] overflow-hidden hover:border-orange-500/30 transition-all duration-500 hover:-translate-y-1"
-                        href="/blogs?category=تقنيات"
+                        to="/blogs?category=تقنيات"
                         data-discover="true"
                         style={{ animationDelay: "300ms" }}
                     >
@@ -153,10 +153,10 @@ export default function Categories() {
                                 </svg>
                             </div>
                         </div>
-                    </a>
-                    <a
+                    </Link>
+                    <Link
                         className="group relative block p-6 rounded-2xl bg-[#161616] border border-[#262626] overflow-hidden hover:border-orange-500/30 transition-all duration-500 hover:-translate-y-1"
-                        href="/blogs?category=معدات"
+                        to="/blogs?category=معدات"
                         data-discover="true"
                         style={{ animationDelay: "400ms" }}
                     >
@@ -187,7 +187,7 @@ export default function Categories() {
                                 </svg>
                             </div>
                         </div>
-                    </a>
+                    </Link>
                 </div>
             </div>
         </section>

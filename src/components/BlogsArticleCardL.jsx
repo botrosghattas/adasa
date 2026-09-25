@@ -1,4 +1,5 @@
 import { dateFormatter } from "../utilis";
+import { Link } from "react-router-dom";
 
 export default function BlogsArticleCardL({post}) {
     return (
@@ -6,9 +7,9 @@ export default function BlogsArticleCardL({post}) {
             className="group bg-[#161616] rounded-2xl border border-[#262626] hover:border-orange-500/30 transition-all duration-500 overflow-hidden"
             style={{ animationDelay: "0ms" }}
         >
-            <a
+            <Link
                 className="flex flex-col md:flex-row"
-                href={`/blogs/${post.slug}`}
+                to={`/blogs/${post.slug}`}
                 data-discover="true"
             >
                 <div className="relative w-full md:w-72 lg:w-80 h-52 md:h-auto shrink-0 overflow-hidden">
@@ -93,7 +94,7 @@ export default function BlogsArticleCardL({post}) {
                         </span>
                     </div>
                 </div>
-            </a>
+            </Link>
         </article>
     );
 }

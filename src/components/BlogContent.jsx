@@ -1,6 +1,7 @@
 import { useNavigate, useParams } from "react-router-dom";
 import {posts} from "../posts.json"
 import { dateFormatter } from "../utilis";
+import { Link } from "react-router-dom";
 
 export default function BlogContent() {
 
@@ -28,21 +29,21 @@ export default function BlogContent() {
                 <div className="absolute inset-0 bg-linear-to-r from-[#0a0a0a]/30 to-transparent" />
                 <div className="absolute top-8 right-8 left-8">
                     <nav className="inline-flex items-center gap-2 px-4 py-2 bg-black/30 backdrop-blur-md rounded-full text-sm border border-white/10">
-                        <a
+                        <Link
                             className="text-white/70 hover:text-white transition-colors"
-                            href="/"
+                            to="/"
                             data-discover="true"
                         >
                             <i className="fa-solid fa-home" />
-                        </a>
+                        </Link>
                         <i className="fa-solid fa-chevron-left text-white/30 text-xs" />
-                        <a
+                        <Link
                             className="text-white/70 hover:text-white transition-colors"
-                            href="/blog"
+                            to="/blog"
                             data-discover="true"
                         >
                             المدونة
-                        </a>
+                        </Link>
                         <i className="fa-solid fa-chevron-left text-white/30 text-xs" />
                         <span className="text-orange-400 font-medium truncate max-w-50">
                             {post.category}
@@ -52,13 +53,13 @@ export default function BlogContent() {
                 <div className="absolute bottom-0 left-0 right-0 p-8 md:p-12">
                     <div className="max-w-5xl mx-auto">
                         <div className="flex flex-wrap items-center gap-3 mb-6">
-                            <a
+                            <Link
                                 className="px-4 py-2 bg-orange-500 text-white text-sm font-bold rounded-full hover:bg-orange-600 transition-colors"
-                                href={`/blogs?category=${post.category}`}
+                                to={`/blogs?category=${post.category}`}
                                 data-discover="true"
                             >
                                 {post.category}
-                            </a>
+                            </Link>
                             <div className="flex items-center gap-4 text-white/70 text-sm">
                                 <span className="flex items-center gap-2">
                                     <i className="fa-regular fa-calendar" />
@@ -230,13 +231,13 @@ export default function BlogContent() {
                                     <p className="text-neutral-400 text-sm mb-4">
                                         اشترك للحصول على أحدث المقالات
                                     </p>
-                                    <a
+                                    <Link
                                         className="block w-full py-3 bg-orange-500 text-white font-semibold rounded-xl hover:bg-orange-600 transition-colors text-center"
-                                        href="/blog"
+                                        to="/blog"
                                         data-discover="true"
                                     >
                                         تصفح المزيد
-                                    </a>
+                                    </Link>
                                 </div>
                             </div>
                         </div>
@@ -257,21 +258,21 @@ export default function BlogContent() {
                                 </p>
                             </div>
                         </div>
-                        <a
+                        <Link
                             className="hidden sm:flex items-center gap-2 text-orange-500 hover:text-orange-400 transition-colors group"
-                            href="/blogs"
+                            to="/blogs"
                             data-discover="true"
                         >
                             عرض الكل
                             <i className="fa-solid fa-arrow-left group-hover:-translate-x-1 transition-transform" />
-                        </a>
+                        </Link>
                     </div>
                     <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
                         {suggestedPosts.slice(0,3).map(post => {
                             return (
-                                <a key={post.id}
+                                <Link key={post.id}
                                     className="group relative bg-[#111111] rounded-2xl overflow-hidden border border-[#262626] hover:border-orange-500/30 transition-all duration-500"
-                                    href={`/blogs/${post.slug}`}
+                                    to={`/blogs/${post.slug}`}
                                     data-discover="true"
                                 >
                                     <div className="relative h-48 overflow-hidden">
@@ -301,7 +302,7 @@ export default function BlogContent() {
                                             <span>{post.readTime}</span>
                                         </div>
                                     </div>
-                                </a>
+                                </Link>
                             )
                         })}
     
